@@ -1,4 +1,4 @@
-FROM ubuntu:14.04 
+FROM drydock/u12nod:prod
 
 COPY . /src
 
