@@ -3,6 +3,7 @@ language: node_js
 
 #build_image: drydock/u12nod:prod
 
+
 # Version number
 node_js:
   #- 0.12
@@ -35,6 +36,7 @@ before_script:
 script:
   - grunt
   - echo $key1
+  
 
 
 # Tell istanbul to generate a coverage report
@@ -42,9 +44,10 @@ after_script:
   - ./node_modules/.bin/istanbul cover grunt -- -u tdd
   - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
 
+
 notifications:
   irc:
    pull_requests: true
    channels:  
     - "chat.freenode.net#test-irc"
-    - "chat.freenode.net#testing2"
+    - "chat.freenode.net#test-cock"
