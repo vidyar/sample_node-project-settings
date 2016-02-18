@@ -11,12 +11,15 @@ node_js:
 
 # The path for Xunit to output test reports
 env:
+ global:
   - XUNIT_FILE=shippable/testresults/result.xml
+  - secure: XbPxEAY2FMC/k0P4o5yPauq6zHGpyDNUb2x5+IVyhS/dNWOuBzMuvdR7VEV8iGwgw3fw22ZBKuwNfg/uPVKjJT+Qqr6HO31RyXveiu3zDrlyJgmFQfG/guDYJKiNNobI8AP5Fn0Vtbo4xvHUzz9z04pbD5pUMZJCbiuSf2rSP5tqLIMr0lajhJnyrM/FgxXG8or4LdNhc6OZBCGB9H/m3IXofioyz0h+0HjnZSlHKsYbw+d56Vis9SLzE9i7ugQXhCzFHHVdp9X2slK3Nl4lI2cP2FL9u45aRdA+GRXylmwANyzR4bHKPJFvnDEcV68Bc0Pb8ttZlGoPCJBDngmh7A==
 
 install:
   #- source ~/.nvm/nvm.sh && nvm install 0.12
   - node --version
   - npm install
+  - echo $key1
 #  - . installMongo.sh
 #  - cat /etc/mongod.conf
 #  - sudo mongod --smallfiles &
